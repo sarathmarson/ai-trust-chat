@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import TrustBanner from './components/TrustBanner.jsx'
 import OperatorPanel from './components/OperatorPanel.jsx'
+import ChatPanel from './components/ChatPanel.jsx'
 
 export default function App() {
   const [activePersona, setActivePersona] = useState('Default Assistant')
@@ -10,7 +11,7 @@ export default function App() {
       <TrustBanner />
       <div className="panels">
         <OperatorPanel onApply={setActivePersona} />
-        <div style={{ padding: '20px', color: '#475569' }}>Chat panel coming soon…</div>
+        <ChatPanel activePersona={activePersona} />
       </div>
     </div>
   )
