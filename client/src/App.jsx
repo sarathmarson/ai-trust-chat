@@ -4,9 +4,11 @@ import OperatorPanel from './components/OperatorPanel.jsx'
 import ChatPanel from './components/ChatPanel.jsx'
 import ThemeToggle from './components/ThemeToggle.jsx'
 
+const VALID_THEMES = ['light', 'grey', 'dark']
+
 function getInitialTheme() {
   const saved = localStorage.getItem('ai-trust-chat-theme')
-  if (saved) return saved
+  if (saved && VALID_THEMES.includes(saved)) return saved
   return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
 }
 
