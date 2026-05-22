@@ -14,6 +14,7 @@
   --trust-banner-bg:    rgba(234,179,8,0.1);
   --trust-banner-border:rgba(234,179,8,0.4);
   --trust-banner-text:  #92400e;
+  --trust-banner-strong: #78350f;
 }
 
 [data-theme="grey"] {
@@ -29,6 +30,7 @@
   --trust-banner-bg:    rgba(234,179,8,0.12);
   --trust-banner-border:rgba(234,179,8,0.25);
   --trust-banner-text:  #f59e0b;
+  --trust-banner-strong: #fbbf24;
 }
 
 [data-theme="dark"] {
@@ -44,17 +46,22 @@
   --trust-banner-bg:    rgba(234,179,8,0.1);
   --trust-banner-border:rgba(234,179,8,0.3);
   --trust-banner-text:  #fbbf24;
+  --trust-banner-strong: #fde68a;
 }
 
 body {
   font-family: 'Segoe UI', system-ui, sans-serif;
-  background: var(--bg-base);
-  color: var(--text-primary);
   height: 100vh;
   overflow: hidden;
 }
 
-.app { display: flex; flex-direction: column; height: 100vh; }
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: var(--bg-base);
+  color: var(--text-primary);
+}
 
 /* App Header */
 .app-header {
@@ -86,6 +93,7 @@ body {
 }
 .theme-btn:hover { background: var(--bg-input); border-color: var(--border); }
 .theme-btn.active { background: var(--bg-input); border-color: var(--accent); }
+.theme-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 /* Trust Banner */
 .trust-banner {
@@ -99,7 +107,7 @@ body {
   color: var(--trust-banner-text);
   flex-shrink: 0;
 }
-.trust-banner strong { color: var(--trust-banner-text); }
+.trust-banner strong { color: var(--trust-banner-strong); }
 
 /* Panels */
 .panels { display: grid; grid-template-columns: 380px 1fr; flex: 1; overflow: hidden; }
