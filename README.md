@@ -35,3 +35,7 @@ https://console.groq.com → API Keys (no credit card needed)
 - Express + Node.js (backend)
 - Groq llama-3.3-70b-versatile (AI)
 - Server-Sent Events (streaming)
+
+## CI/CD
+
+[![CI](https://github.com/sarathmarson/ai-trust-chat/actions/workflows/ci.yml/badge.svg)](https://github.com/sarathmarson/ai-trust-chat/actions/workflows/ci.yml)
