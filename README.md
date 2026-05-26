@@ -2,7 +2,9 @@
 
 An interactive React + Vite web app that demonstrates Anthropic's three-tier AI trust hierarchy — Anthropic, Operator, and User. Configure a live system prompt via the Operator panel, then chat with Claude in real time. Supports three themes and deploys fully to GitHub Pages.
 
-**Live demo:** [sarathmarson.github.io/ai-trust-chat](https://sarathmarson.github.io/ai-trust-chat/)
+**UI preview:** [sarathmarson.github.io/ai-trust-chat](https://sarathmarson.github.io/ai-trust-chat/)
+
+> **Note:** The GitHub Pages link shows the full UI but chat is disabled there — the Groq API calls require the Express proxy which only runs locally. To use the chat, clone the repo and run it locally with your own API key (see [Getting Started](#getting-started) below).
 
 ---
 
